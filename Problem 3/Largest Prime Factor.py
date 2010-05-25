@@ -1,3 +1,5 @@
+import math
+
 def isPrime(val):
     print 'isPrime? ',val;
     a = val/2;
@@ -11,7 +13,7 @@ def isPrime(val):
 
 def largestPrimeFactor(value):
     # Know that all factors must be at most half its value
-    c = value/29;
+    c = math.ceil(math.sqrt(value));
     # Go down 1 by 1 checking if prime
     while c > 0:
         if ((value % c) == 0):
@@ -21,5 +23,7 @@ def largestPrimeFactor(value):
     return 'Failed';
 
 question = 600851475143;
+#question = 13195
 result = largestPrimeFactor(question);
 print 'Result: ', result
+

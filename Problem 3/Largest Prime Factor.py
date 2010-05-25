@@ -12,7 +12,7 @@ def isPrime(val):
     return True;
 
 def largestPrimeFactor(value):
-    # Know that all factors must be at most half its value
+    # Know that all factors must be at most sqrt of it's value
     c = math.ceil(math.sqrt(value));
     # Go down 1 by 1 checking if prime
     while c > 0:

@@ -1,4 +1,5 @@
 # Smallest number divisible
+import time;
 
 def IsPrime(val):
     i = 2;
@@ -20,6 +21,7 @@ def SmallestNumberDivisible(minVal, maxVal):
 
     # Add all primes to array
     primes = [];
+    # All others added, so only check these if passed primes
     others = [];
     for i in range(minVal, maxVal):
         if IsPrime(i):
@@ -38,5 +40,8 @@ def SmallestNumberDivisible(minVal, maxVal):
             return result;
 
 print 'Working on numbers 1 to 20';
+start = time.time();
 print 'Result: ' + str(SmallestNumberDivisible(1,20));
+end = time.time();
+print 'It took ' + str(end - start) + ' seconds.';
 

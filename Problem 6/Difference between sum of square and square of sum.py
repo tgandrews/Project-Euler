@@ -18,8 +18,7 @@ def Sum(maxVal):
 
     resultSumSquared = resultSum * resultSum;
     result = resultSumSquared - resultSquares;
-    if result < 0:
-        result = result * -1;
+
     return result;
 
 print 'Working on first 100 natural numbers'

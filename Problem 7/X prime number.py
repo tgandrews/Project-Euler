@@ -1,12 +1,18 @@
-# Finding the 1001st prime numbers
+# Finding the 10001st prime numbers
 
 import time;
+import math;
 
 primes = [];
 
 def IsPrime(val):
+    # A number is only prime if the ceiling of it's not divisible by any
+    # prime less than it's square root
+    maxPrime = math.ceil(math.sqrt(val));
     for p in primes:
-        if ((val % p) == 0):
+        if (p > maxPrime):
+            break;
+        elif ((val % p) == 0):
             return False;
     return True;
 

@@ -3,8 +3,6 @@
 import math;
 import time;
 
-# val: The string to
-
 def CalculateConsecutiveProduct(val, consec):
     result = 1;
 
